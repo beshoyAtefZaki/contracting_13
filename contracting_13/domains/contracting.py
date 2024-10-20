@@ -25,6 +25,15 @@ data = {
 
             },
             {
+                "fieldname": "project_name",
+                "fieldtype": "Data",
+                "insert_after": "project",
+                # "depends_on": "eval:doc.against_comparison == 1",
+                # "mandatory_depends_on": "eval:doc.against_comparison == 1",
+                "label": "Project Name",
+                "fetch_from":"project.project_name"
+            },
+            {
                 "fieldname": "comparison_item",
                 "fieldtype": "Link",
                 "insert_after": "comparison",
@@ -39,6 +48,14 @@ data = {
                 "insert_after": "comparison_item",
 
             }
+        ],
+        "Material Request Item":[
+            {
+                "fieldname": "attach_image",
+                "fieldtype": "Image",
+                "insert_after": "description",
+                "label": "Attach Image",
+            },
         ],
         'Quotation':[
             {
